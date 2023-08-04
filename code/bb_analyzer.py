@@ -1,44 +1,20 @@
 import json
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import utils
-from PIL import Image
-
-def computeCentroid(boxes: 'np.ndarray', ids: 'np.ndarray', files: 'list'):
-    """computes coordinates of centroids and returns them as list"""
-    centroids = []
-    images = [np.array(Image.open(file).convert('L')) for file in files]
-    for i in range(len(boxes)):
-        box = boxes[i]
-        index = ids[i]
-        image = images[ids[i]]
-        sum_x = 0
-        sum_y = 0
-        x0 = int(box[0])
-        y0 = int(box[1])
-        columns = int(box[2])
-        rows = int(box[3])
-        defect = image[y0:(y0+rows), x0:(x0+columns)]
-        for i in range(columns):
-            for j in range(rows):
-                sum_x += x0 + i*defect[j][i]/255
-                sum_y += y0 + j*defect[j][i]/255
-        centroids.append([sum_x/(columns*rows), sum_y/(columns*rows)])
-    return centroids
 
 class BbAnalyzer:
     """"""
     images: 'list'
     data: 'dict'
-    def __init__(self, json_path, defect_dir):
+    def __init__(self, json_path: 'str', defect_dir: 'str'):
         f = open(json_path)
         self.data = json.load(f)
         self.images = utils.get_file_paths(defect_dir)
 
-    def createSdHistogramFast(self, bins: 'int'):
+    def createSdHistogramFast(self, bins: 'list'):
         columns = self.data["images"][0]["width"]
         rows = self.data["images"][0]["height"]
         data = self.data["annotations"]
@@ -50,12 +26,12 @@ class BbAnalyzer:
         plt.title("Spatial defect centroid distribution")
         plt.colorbar()
 
-    def createSdHistogram(self, bins):
+    def createSdHistogram(self, bins: 'list'):
         columns = self.data["images"][0]["width"]
         rows = self.data["images"][0]["height"]
         data = self.data["annotations"]
         boxes, ids = np.asarray(list((defect["bbox"] for defect in data))), np.asarray(list((defect["image_id"] for defect in data))),
-        centroids = computeCentroid(boxes, ids, self.images)
+        centroids = utils.computeCentroid(boxes, ids, self.images)
         x = [centroid[0] for centroid in centroids]
         y = [centroid[1] for centroid in centroids]
         plt.hist2d(x, y, range=[[0, columns], [0, rows]], bins=bins)
@@ -76,7 +52,7 @@ class BbAnalyzer:
         plt.title("Number of defects per image")
         plt.xlabel("Image id")
 
-    def createDefSizePerImhHistogram(self):
+    def createDefSizePerImgHistogram(self):
         data = self.data['annotations']
         ids = list((sub["image_id"] for sub in data))
         areas = np.asarray(list((sub["area"] for sub in data)))
