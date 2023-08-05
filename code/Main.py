@@ -20,11 +20,20 @@ def main():
     plt.title("Spatial defect centroid distribution (bins = 90 X 72)")
     """
     fig1 = plt.figure()
-    myBa.createDefSizePerImgHistogram()
+    myBa.createDefAreaHist()
+    fig2 = plt.figure()
+    myBa.createDefPixelIntHist(bins = 256)
+    fig3 = plt.figure()
+    myBa.createDefPixNumHist()
+    fig4 = plt.figure()
+    myBa.createDefAreaPerImgHist()
+    fig5 = plt.figure()
+    myBa.createDefPixSizeHist()
     if len(sys.argv) > 1:
-        fig1.savefig(sys.argv[1] % 'defect_size_per_image_dist')
-        #fig2.savefig(sys.argv[1] % 'real_centroid_distribution_(50X40)')
-        #fig3.savefig(sys.argv[1] % 'real_centroid_distribution_(90X72)')
+        fig1.savefig(sys.argv[1] % 'defect_area_dist')
+        fig2.savefig(sys.argv[1] % 'defect_pixel_distribution')
+        fig3.savefig(sys.argv[1] % 'defect_size_distribution')
+        fig4.savefig(sys.argv[1] % 'defect_area_per_image')
     else:
         plt.show()
 

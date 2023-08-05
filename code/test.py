@@ -9,5 +9,6 @@ ids = np.asarray(list((sub["image_id"] for sub in data)))
 print(ids)
 
 a = [[1, 3], [2, 4]]
+print(data)
 
 

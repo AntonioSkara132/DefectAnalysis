@@ -14,7 +14,7 @@ class BbAnalyzer:
         self.data = json.load(f)
         self.images = utils.get_file_paths(defect_dir)
 
-    def createSdHistogramFast(self, bins: 'list'):
+    def createSdHistFast(self, bins: 'list'):
         columns = self.data["images"][0]["width"]
         rows = self.data["images"][0]["height"]
         data = self.data["annotations"]
@@ -26,47 +26,107 @@ class BbAnalyzer:
         plt.title("Spatial defect centroid distribution")
         plt.colorbar()
 
-    def createSdHistogram(self, bins: 'list'):
+    def createSdHist(self, bins: 'list'):
         columns = self.data["images"][0]["width"]
         rows = self.data["images"][0]["height"]
         data = self.data["annotations"]
-        boxes, ids = np.asarray(list((defect["bbox"] for defect in data))), np.asarray(list((defect["image_id"] for defect in data))),
-        centroids = utils.computeCentroid(boxes, ids, self.images)
+        centroids = utils.computeCentroid(data, self.images)
         x = [centroid[0] for centroid in centroids]
         y = [centroid[1] for centroid in centroids]
         plt.hist2d(x, y, range=[[0, columns], [0, rows]], bins=bins)
         plt.title("Spatial defect centroid distribution")
         plt.colorbar()
 
-    def createDefSizeHistogram(self):
+    def createDefAreaHist(self):
         data = self.data['annotations']
         areas = np.asarray(list((sub["area"] for sub in data)))
         sns.histplot(areas, log_scale=True)
-        plt.title("Size defect distribution")
-        plt.xlabel("Area [pixel^2]")
+        plt.title("Defect area distribution")
+        plt.xlabel("Area")
 
-    def createNumOfDefPerImgHistogram(self):
+    def createNumOfDefPerImgHist(self):
         data = self.data['annotations']
         ids = np.asarray(list((sub["image_id"] for sub in data)))
         sns.histplot(ids, discrete=True)
         plt.title("Number of defects per image")
         plt.xlabel("Image id")
 
-    def createDefSizePerImgHistogram(self):
+    def createDefAreaPerImgHist(self):
         data = self.data['annotations']
         ids = list((sub["image_id"] for sub in data))
         areas = np.asarray(list((sub["area"] for sub in data)))
         hist_data = pd.DataFrame({"Image_id":ids, "Area": areas})
-        sns.histplot(hist_data, x='Image_id', y='Area', log_scale=(False, True), discrete=True, cbar=True)
+        sns.histplot(hist_data, x='Image_id', y='Area', log_scale=(False, True), discrete = (True, False), cbar=True, bins = (10, 10))
         plt.title("Defect area per image")
         plt.xlabel("Image id")
 
-    def createNumOfDefPfrImgHistogram(self):
+    def createNumOfDefPfrImgHist(self):
         data = self.data['annotations']
         #SizeIdPairs = {"image_id": sub['image_id'], "area" }
         #sns.histplot(ids, discrete=True)
         plt.title("Number of defects per image")
         plt.xlabel("Image id")
+
+    def createDefPixelIntHist(self, bins):
+        data = self.data["annotations"]
+        defects = utils.getDefects(data, self.images)
+        freqs = np.zeros([256])
+        for defect in defects:
+            freqs = utils.addFrequencies(freqs, defect.ravel())
+        data = {'Frequency': freqs / np.sum(freqs), 'Intensity': np.arange(256)}
+        sns.histplot(data, x='Intensity', weights='Frequency', bins=bins, discrete=True)
+        plt.ylabel("Frequency(normalized)")
+        plt.title("Overall defect pixel distribution")
+
+    def createKDEDefPixelIntHist(self):
+        data = self.data["annotations"]
+        defects = utils.getDefects(data, self.images)
+        freqs = np.zeros([256])
+        for defect in defects:
+            freqs = utils.addFrequencies(freqs, defect.ravel())
+        data = {'Frequency': freqs / np.sum(freqs), 'Intensity': np.arange(256)}
+        sns.kdeplot(data, x='Intensity', weights='Frequency', bw_adjust=0.1)
+        plt.ylabel("Frequency(normalized)")
+        plt.title("Overall defect pixel distribution density")
+
+    def createDefPixNumHist(self):
+        data = self.data["annotations"]
+        defects = utils.getDefects(data, self.images)
+        hist_data = [np.count_nonzero(defect) for defect in defects]
+        sns.histplot(hist_data, log_scale=True)
+        plt.ylabel("Count")
+        plt.xlabel("Defect size in number of pixels")
+        plt.title("Defect size distribution")
+
+    def createDefPixSizeHist(self):
+        data = self.data["annotations"]
+        defects = utils.getDefects(data, self.images)
+        pixels = []
+        sizes = []
+        for defect in defects:
+            size = np.count_nonzero(defect)
+            for row in defect:
+                for pixel in row:
+                    pixels.append(pixel)
+                    sizes.append(size)
+        #hist_data = pd.DataFrame(pixels_and_sizes, columns=['Pixel_value', 'Size'])
+        #sns.histplot(hist_data, x='Pixel_value', y='Size', log_scale=(False, True), bins=(50, 50), cbar=True, fill=True)
+        plt.hist2d(x=pixels, y=np.log10(sizes), bins = [40, 40])
+        plt.colorbar()
+        plt.ylabel("Size powers")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

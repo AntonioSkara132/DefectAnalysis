@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a31456-e825-45ba-8201-eb19e290e9bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/defect_pixel_distribution.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/defect_pixel_distribution_density.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/bb_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/bb_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/real_centroid_distribution_(25X20).png" beforeDir="false" afterPath="$PROJECT_DIR$/results/real_centroid_distribution_(25X20).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/defect_size_distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/defect_size_distribution.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/defect_size_per_image_dist.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../hello.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
