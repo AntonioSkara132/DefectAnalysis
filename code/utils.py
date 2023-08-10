@@ -1,7 +1,7 @@
 import glob
 from PIL import Image
 import numpy as np
-
+import xlsxwriter as xls
 
 def get_file_paths(directory_path: 'str') -> list:
     """Return a list of paths matching a pathname pattern."""
@@ -30,11 +30,14 @@ def computeCentroid(data: 'dict', files: 'list'):
         columns = int(box[2])
         rows = int(box[3])
         defect = image[y0:(y0+rows), x0:(x0+columns)]
+        size = 0
         for i in range(columns):
             for j in range(rows):
-                sum_x += x0 + i*defect[j][i]/255
-                sum_y += y0 + j*defect[j][i]/255
-        centroids.append([sum_x/(columns*rows), sum_y/(columns*rows)])
+                if defect[j][i] != 0:
+                    size+=1
+                    sum_x += x0 + i
+                    sum_y += y0 + j
+        centroids.append([sum_x/size, sum_y/size])
     return centroids
 
 def getDefects(data: 'dict', files: 'list'):
@@ -53,3 +56,9 @@ def getDefects(data: 'dict', files: 'list'):
         defects.append(defect)
     return defects
 
+def saveAsExcel(name: 'str', filenames: 'list'):
+    workbook = xls.Workbook(name)
+    worksheet = workbook.add_worksheet()
+    for i in range(len(filenames)):
+        worksheet.insert_image(chr(66 + (i % 3) * 10) + str(2 + int((i / 3)) * 25), filenames[i]) #B1, L1, V1, B26, L26...
+    workbook.close()

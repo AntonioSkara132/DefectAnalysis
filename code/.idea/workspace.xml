@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e05d6090-3ea7-40b9-8927-f0b8deb015e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../data/labeled_images/_annotations.coco.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bb_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bb_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/_annotations.coco.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/labeled_images/img-240-_bmp.rf.ece68033ae231a6ef843670cb95df755_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/centroid_distribution_(90X72).png" beforeDir="false" afterPath="$PROJECT_DIR$/../results/centroid_distribution_(90X72).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/defect_area_dist.png" beforeDir="false" afterPath="$PROJECT_DIR$/../results/defect_area_dist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/defect_area_per_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/../results/defect_area_per_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/defect_pixel_distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/../results/defect_pixel_distribution.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../results/defect_size_distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/../results/defect_size_distribution.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2Tka6dNNU9Fu46kWk8XZX1R6Jng" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/antonio123/workspace/Github_projects/DefectAnalysis"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e05d6090-3ea7-40b9-8927-f0b8deb015e4" name="Changes" comment="" />
+      <created>1691589357335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691589357335</updated>
+    </task>
+    <servers />
+  </component>
+</project>

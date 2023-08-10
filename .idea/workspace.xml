@@ -5,15 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a31456-e825-45ba-8201-eb19e290e9bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/results/defect_pixel_distribution.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/defect_pixel_distribution_density.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/code.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-241-_bmp.rf.0e7f3642c48e757d33c75645101a7c92_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-243-_bmp.rf.f7bbb5860951985ed827a905152c7330_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-245-_bmp.rf.f71499109b2440bb73213cf94d848380_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-246-_bmp.rf.6cef637841049e32362293d71ac66710_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-247-_bmp.rf.38b90295d422ce233bd3c7c670c65df0_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/labeled_images/img-248-_bmp.rf.b8f42351a3459badb3046e9e6f64dfcc_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-241-_bmp.rf.0e7f3642c48e757d33c75645101a7c92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-242-_bmp.rf.7165309dd8e75f8431ce22d68e3cb1e0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-243-_bmp.rf.f7bbb5860951985ed827a905152c7330.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-245-_bmp.rf.f71499109b2440bb73213cf94d848380.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-246-_bmp.rf.6cef637841049e32362293d71ac66710.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-247-_bmp.rf.38b90295d422ce233bd3c7c670c65df0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/unlabeled_images/img-248-_bmp.rf.b8f42351a3459badb3046e9e6f64dfcc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/defect_area_distribution.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rezultati.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/bb_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/bb_analyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/_annotations.coco.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/_annotations.coco.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/labeled_images/img-240-_bmp.rf.ece68033ae231a6ef843670cb95df755_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/centroid_distribution_(90X72).png" beforeDir="false" afterPath="$PROJECT_DIR$/results/centroid_distribution_(90X72).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/defect_area_dist.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/defect_area_dist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/defect_area_per_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/defect_area_per_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/defect_pixel_distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/defect_pixel_distribution.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/defect_size_distribution.png" beforeDir="false" afterPath="$PROJECT_DIR$/results/defect_size_distribution.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/defect_size_per_image_dist.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../hello.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,24 +80,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/antonio123/workspace/Github_projects/DefectAnalysis/code&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/antonio123/workspace/Github_projects/DefectAnalysis"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/code" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/data/unlabeled_images" />
       <recent name="$PROJECT_DIR$/data/labeled_images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DefectAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.Main" />
       </list>
     </recent_temporary>
   </component>
